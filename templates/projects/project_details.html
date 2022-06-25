@@ -1,0 +1,214 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+{% block title %} Project Details {% endblock title %}
+{% block toolbar_small %}
+{% include 'includes/toolbar_small.html' %}
+{% endblock toolbar_small %}
+{% block main_content %}
+
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div id="kt_content_container" class="container-xxl">
+            {% include 'includes/project_banner.html' %}
+            <!--begin::Row-->
+            <div class="row g-6 g-xl-9">
+                <!--begin::Col-->
+                <div class="col-lg-6">
+                    <!--begin::Charts Widget 3-->
+                    <div class="card card-xl-stretch mb-xl-8">
+                        <!--begin::Header-->
+                        <div class="card-header border-0 pt-5">
+                            <h3 class="card-title align-items-start flex-column">
+                                <span class="card-label fw-bolder fs-3 mb-1">Temprature</span>
+                            </h3>
+                            <!--begin::Toolbar-->
+                            <div class="card-toolbar" data-kt-buttons="true">
+                                <a class="btn btn-sm btn-color-muted btn-active btn-active-primary active px-4 me-1"
+                                   id="kt_charts_widget_3_year_btn">Year</a>
+                                <a class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4 me-1"
+                                   id="kt_charts_widget_3_month_btn">Month</a>
+                                <a class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4"
+                                   id="kt_charts_widget_3_week_btn">Week</a>
+                            </div>
+                            <!--end::Toolbar-->
+                        </div>
+                        <!--end::Header-->
+                        <!--begin::Body-->
+                        <div class="card-body">
+                            <!--begin::Chart-->
+                            <div id="kt_charts_widget_3_chart" style="height: 350px"></div>
+                            <!--end::Chart-->
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end::Charts Widget 3-->
+                </div>
+                <!--end::Col-->
+
+                <!--begin::Col-->
+                <div class="col-lg-6">
+                    <!--begin::Charts Widget 5-->
+                    <div class="card card-xl-stretch mb-5 mb-xl-8">
+                        <!--begin::Header-->
+                        <div class="card-header border-0 pt-5">
+                            <h3 class="card-title align-items-start flex-column">
+                                <span class="card-label fw-bolder fs-3 mb-1">Water</span>
+
+                            </h3>
+                            {#												<!--begin::Toolbar-->#}
+                            {#												<div class="card-toolbar" data-kt-buttons="true">#}
+                            {#													<a class="btn btn-sm btn-color-muted btn-active btn-active-primary active px-4 me-1" id="kt_charts_widget_6_sales_btn">Sales</a>#}
+                            {#													<a class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4 me-1" id="kt_charts_widget_6_expenses_btn">Expenses</a>#}
+                            {#												</div>#}
+                            {#												<!--end::Toolbar-->#}
+                        </div>
+                        <!--end::Header-->
+                        <!--begin::Body-->
+                        <div class="card-body">
+                            <!--begin::Chart-->
+                            <div id="kt_charts_widget_6_chart" style="height: 350px"></div>
+                            <!--end::Chart-->
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end::Charts Widget 5-->
+                </div>
+                <!--end::Col-->
+                <!--begin::Col-->
+                <div class="col-lg-6">
+                    <!--begin::Graph-->
+                    <div class="card card-flush h-lg-100">
+                        <!--begin::Card header-->
+                        <div class="card-header mt-6">
+                            <!--begin::Card title-->
+                            <div class="card-title flex-column">
+                                <h3 class="fw-bolder mb-1">Humidity</h3>
+                                <!--begin::Labels-->
+                                <div class="fs-6 d-flex text-gray-400 fs-6 fw-bold">
+                                    <!--begin::Label-->
+                                    <div class="d-flex align-items-center me-6">
+														<span class="menu-bullet d-flex align-items-center me-2">
+															<span class="bullet bg-success"></span>
+														</span>Minimum
+                                    </div>
+                                    <!--end::Label-->
+                                    <!--begin::Label-->
+                                    <div class="d-flex align-items-center">
+														<span class="menu-bullet d-flex align-items-center me-2">
+															<span class="bullet bg-primary"></span>
+														</span>Maximum
+                                    </div>
+                                    <!--end::Label-->
+                                </div>
+                                <!--end::Labels-->
+                            </div>
+                            <!--end::Card title-->
+                            <!--begin::Card toolbar-->
+                            <div class="card-toolbar">
+                                <!--begin::Select-->
+                                <select name="status" data-control="select2" data-hide-search="true"
+                                        class="form-select form-select-solid form-select-sm fw-bolder w-100px">
+                                    <option value="1">2020 Q1</option>
+                                    <option value="2">2020 Q2</option>
+                                    <option value="3" selected="selected">2020 Q3</option>
+                                    <option value="4">2020 Q4</option>
+                                </select>
+                                <!--end::Select-->
+                            </div>
+                            <!--end::Card toolbar-->
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body pt-10 pb-0 px-5">
+                            <!--begin::Chart-->
+                            <div id="kt_project_overview_graph" class="card-rounded-bottom" style="height: 300px"></div>
+                            <!--end::Chart-->
+                        </div>
+                        <!--end::Card body-->
+                    </div>
+                    <!--end::Graph-->
+                </div>
+                <!--end::Col-->
+
+                <div class="col-lg-6">
+                    <!--begin::Mixed Widget 17-->
+                    <div class="card card-xl-stretch mb-5 mb-xl-8">
+                        <!--begin::Body-->
+                        <div class="card-body pt-5">
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-stack">
+                                <!--begin::Title-->
+                                <h4 class="fw-bolder text-gray-800 m-0">Building Health Score</h4>
+                                <!--end::Title-->
+                                <!--begin::Menu-->
+                                <button type="button"
+                                        class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
+                                        data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                    <!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
+                                    <span class="svg-icon svg-icon-2">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24px"
+                                                                 height="24px" viewBox="0 0 24 24">
+																<g stroke="none" stroke-width="1" fill="none"
+                                                                   fill-rule="evenodd">
+																	<rect x="5" y="5" width="5" height="5" rx="1"
+                                                                          fill="currentColor"/>
+																	<rect x="14" y="5" width="5" height="5" rx="1"
+                                                                          fill="currentColor" opacity="0.3"/>
+																	<rect x="5" y="14" width="5" height="5" rx="1"
+                                                                          fill="currentColor" opacity="0.3"/>
+																	<rect x="14" y="14" width="5" height="5" rx="1"
+                                                                          fill="currentColor" opacity="0.3"/>
+																</g>
+															</svg>
+														</span>
+                                    <!--end::Svg Icon-->
+                                </button>
+                                <!--end::Menu-->
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Chart-->
+                            <div class="d-flex flex-center w-100">
+                                <div class="mixed-widget-17-chart" data-kt-chart-color="success"
+                                     style="height: 300px"></div>
+                            </div>
+                            <!--end::Chart-->
+                            <!--begin::Content-->
+                            <div class="text-center w-100 position-relative z-index-1" style="margin-top: -130px">
+                                <!--begin::Text-->
+                                <p class="fw-bold fs-4 text-gray-400 mb-6">If there's unsual increase or decrease in
+                                    temprature<br>please issue an alert.</p>
+                                <!--end::Text-->
+                                <!--begin::Action-->
+                                <div class="mb-9 mb-xxl-1">
+                                    <a href='#' class="btn btn-success fw-bold" data-bs-toggle="modal"
+                                       data-bs-target="#kt_modal_invite_friends">Alert Team</a>
+                                </div>
+                                <!--ed::Action-->
+                            </div>
+                            <!--end::Content-->
+                        </div>
+                        <!--end::Body-->
+                        <!--begin::Footer-->
+                        <div class="card-footer d-flex flex-center py-5">
+                            Issuing alert will send notification to authorities.
+                        </div>
+                        <!--ed::Info-->
+                    </div>
+                    <!--end::Mixed Widget 17-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Row-->
+
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+
+{% endblock main_content %}
+{% block extra_js %}
+    <script src="{% static 'js/custom/apps/projects/project/project.js' %}"></script>
+    <script src="{% static 'js/custom/apps/projects/view/add-sensor.js' %}"></script>
+    <script src="{% static 'js/custom/apps/projects/view/add-building.js' %}"></script>
+{% endblock extra_js %}

@@ -1,0 +1,332 @@
+{% load static %}
+<!--begin::Navbar-->
+<div class="card mb-6 mb-xl-9">
+    <div class="card-body pt-9 pb-0">
+        <!--begin::Details-->
+        <div class="d-flex flex-wrap flex-sm-nowrap mb-6">
+            <!--begin::Image-->
+            <div class="d-flex flex-center flex-shrink-0 bg-light rounded w-100px h-100px w-lg-150px h-lg-150px me-7 mb-4">
+                <img class="mw-50px mw-lg-75px" src="{% static 'media/svg/brand-logos/volicity-9.svg' %}"
+                     alt="image"/>
+            </div>
+            <!--end::Image-->
+            <!--begin::Wrapper-->
+            <div class="flex-grow-1">
+                <!--begin::Head-->
+                <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
+                    <!--begin::Details-->
+                    <div class="d-flex flex-column">
+                        <!--begin::Status-->
+                        <div class="d-flex align-items-center mb-1">
+                            <a href="#" class="text-gray-800 text-hover-primary fs-2 fw-bolder me-3">Burj Al
+                                Arab</a>
+                            <span class="badge badge-light-success me-auto">UAE Govt</span>
+                        </div>
+                        <!--end::Status-->
+                    </div>
+                    <!--end::Details-->
+                    <!--begin::Actions-->
+                    <div class="d-flex mb-4">
+                        <a href="#" class="btn btn-sm btn-bg-light btn-active-color-primary me-3"
+                           data-bs-toggle="modal" data-bs-target="#kt_modal_add_sensor">Add Sensor</a>
+                        <a href="#" class="btn btn-sm btn-primary me-3" data-bs-toggle="modal"
+                           data-bs-target="#kt_modal_add_building">Add Building</a>
+                        <!--begin::Menu-->
+                        <div class="me-0">
+                            <button class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
+                                    data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                <i class="bi bi-three-dots fs-3"></i>
+                            </button>
+                            <!--begin::Menu 3-->
+                            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-bold w-200px py-3"
+                                 data-kt-menu="true">
+
+                                <!--begin::Menu item-->
+                                <div class="menu-item px-3">
+                                    <a href="#" class="menu-link px-3">Settings</a>
+                                </div>
+                                <!--end::Menu item-->
+                                <!--begin::Menu item-->
+                                <div class="menu-item px-3">
+                                    <a href="#" class="menu-link flex-stack px-3 text-danger">Delete Project
+                                        <i class="fas fa-exclamation-circle ms-2 fs-7"
+                                           data-bs-toggle="tooltip"
+                                           title="You will need administrative permissions to delete the project."></i></a>
+                                </div>
+                                <!--end::Menu item-->
+                            </div>
+                            <!--end::Menu 3-->
+                        </div>
+                        <!--end::Menu-->
+                    </div>
+                    <!--end::Actions-->
+                </div>
+                <!--end::Head-->
+                <!--begin::Info-->
+                <div class="d-flex flex-wrap justify-content-start">
+                    <!--begin::Stats-->
+                    <div class="d-flex flex-wrap">
+                        <!--begin::Stat-->
+                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
+                            <!--begin::Number-->
+                            <div class="d-flex align-items-center">
+                                <div class="fs-4 fw-bolder">29</div>
+                            </div>
+                            <!--end::Number-->
+                            <!--begin::Label-->
+                            <div class="fw-bold fs-6 text-gray-400">Buildings</div>
+                            <!--end::Label-->
+                        </div>
+                        <!--end::Stat-->
+                        <!--begin::Stat-->
+                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
+                            <!--begin::Number-->
+                            <div class="d-flex align-items-center">
+                                <div class="fs-4 fw-bolder" data-kt-countup="true"
+                                     data-kt-countup-value="75">0
+                                </div>
+                            </div>
+                            <!--end::Number-->
+                            <!--begin::Label-->
+                            <div class="fw-bold fs-6 text-gray-400">Sensors</div>
+                            <!--end::Label-->
+                        </div>
+                        <!--end::Stat-->
+                        <!--begin::Stat-->
+                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
+                            <!--begin::Number-->
+                            <div class="d-flex align-items-center">
+
+                                <div class="fs-4 fw-bolder" data-kt-countup="true"
+                                     data-kt-countup-value="105">0
+                                </div>
+                            </div>
+                            <!--end::Number-->
+                            <!--begin::Label-->
+                            <div class="fw-bold fs-6 text-gray-400">Locations</div>
+                            <!--end::Label-->
+                        </div>
+                        <!--end::Stat-->
+                    </div>
+                    <!--end::Stats-->
+                </div>
+                <!--end::Info-->
+            </div>
+            <!--end::Wrapper-->
+        </div>
+        <!--end::Details-->
+        <div class="separator"></div>
+        <!--begin::Nav-->
+        <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bolder">
+            <!--begin::Nav item-->
+            <li class="nav-item">
+                <a class="nav-link text-active-primary py-5 me-6 active"
+                   href="{% url 'project_details' %}">Overview</a>
+            </li>
+            <!--end::Nav item-->
+            <!--begin::Nav item-->
+            <li class="nav-item">
+                <a class="nav-link text-active-primary py-5 me-6"
+                   href="{% url 'installed_sensors' %}">Installed Sensors</a>
+            </li>
+            <!--end::Nav item-->
+            <!--begin::Nav item-->
+            <li class="nav-item">
+                <a class="nav-link text-active-primary py-5 me-6"
+                   href="{% url 'project_files' %}">Files</a>
+            </li>
+            <!--end::Nav item-->
+            <!--begin::Nav item-->
+            <li class="nav-item">
+                <a class="nav-link text-active-primary py-5 me-6"
+                   href="{% url 'project_alerts' %}">Alerts</a>
+            </li>
+            <!--end::Nav item-->
+            <!--begin::Nav item-->
+            <li class="nav-item">
+                <a class="nav-link text-active-primary py-5 me-6"
+                   href="{% url 'project_settings' %}">Settings</a>
+            </li>
+            <!--end::Nav item-->
+        </ul>
+        <!--end::Nav-->
+    </div>
+</div>
+<!--end::Navbar-->
+
+
+<!--begin::Modal - Add Sensor-->
+<div class="modal fade" id="kt_modal_add_sensor" tabindex="-1" aria-hidden="true">
+    <!--begin::Modal dialog-->
+    <div class="modal-dialog mw-650px">
+        <!--begin::Modal content-->
+        <div class="modal-content">
+            <!--begin::Modal header-->
+            <div class="modal-header">
+                <!--begin::Modal title-->
+                <h2 class="fw-bolder">Add New Sensor</h2>
+                <!--end::Modal title-->
+                <!--begin::Close-->
+                <div id="kt_modal_add_sensor_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                    <span class="svg-icon svg-icon-1">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                             viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.5" x="6" y="17.3137" width="16" height="2"
+                                                                  rx="1" transform="rotate(-45 6 17.3137)"
+                                                                  fill="currentColor"/>
+															<rect x="7.41422" y="6" width="16" height="2" rx="1"
+                                                                  transform="rotate(45 7.41422 6)" fill="currentColor"/>
+														</svg>
+													</span>
+                    <!--end::Svg Icon-->
+                </div>
+                <!--end::Close-->
+            </div>
+            <!--end::Modal header-->
+            <!--begin::Modal body-->
+            <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+                <!--begin::Form-->
+                <form id="kt_modal_add_sensor_form" class="form" action="#">
+                    <!--begin::Input group-->
+                    <div class="fv-row mb-7">
+                        <!--begin::Label-->
+                        <label class="required fs-6 fw-bold form-label mb-2">Sensor</label>
+                        <!--end::Label-->
+                        <!--begin::Input-->
+                        <select class="form-select form-select-solid fw-bolder" name="select_sensor" id="select_sensor"
+                                data-control="select_sensor" data-placeholder="Select an option"
+                                data-hide-search="true">
+                            <option></option>
+                            <option value="Temprature Sensor">Temprature Sensor</option>
+                            <option value="Proximity Sensor">Proximity Sensor</option>
+                            <option value="Leakage Sensor">Leakage Sensor</option>
+                        </select>
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group-->
+                    <!--begin::Input group-->
+                    <div class="fv-row mb-7">
+                        <!--begin::Label-->
+                        <label class="required fs-6 fw-bold form-label mb-2">Building</label>
+                        <!--end::Label-->
+                        <!--begin::Input-->
+                        <select class="form-select form-select-solid fw-bolder" name="select_building"
+                                id="select_building"
+                                data-control="select_building" data-placeholder="Select an option"
+                                data-hide-search="true">
+                            <option></option>
+                            <option value="Burj Al Arab">Burj Al Arab</option>
+                            <option value="Burj Khalifa">Burj Khalifa</option>
+                            <option value="Visio Tower">Visio Tower</option>
+                        </select>
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group-->
+                    <!--begin::Input group-->
+                    <div class="fv-row mb-7">
+                        <!--begin::Label-->
+                        <label class="fs-6 fw-bold form-label mb-2">
+                            <span class="required">Sensor Location</span>
+                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip"
+                               title="Please enter sensor location i.e Boiler Room"></i>
+                        </label>
+                        <!--end::Label-->
+                        <!--begin::Input-->
+                        <input type="text" class="form-control form-control-solid" name="sensor_location"
+                               id="sensor_location" value="" required/>
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group-->
+
+                    <!--begin::Actions-->
+                    <div class="text-center">
+                        <button type="reset" id="kt_modal_add_sensor_cancel" class="btn btn-light me-3">
+                            Discard
+                        </button>
+                        <button type="submit" id="kt_modal_add_sensor_submit" class="btn btn-primary">
+                            <span class="indicator-label">Submit</span>
+                            <span class="indicator-progress">Please wait...
+															<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        </button>
+                    </div>
+                    <!--end::Actions-->
+                </form>
+                <!--end::Form-->
+            </div>
+            <!--end::Modal body-->
+        </div>
+        <!--end::Modal content-->
+    </div>
+    <!--end::Modal dialog-->
+</div>
+
+<!--begin::Modal - Add Building-->
+<div class="modal fade" id="kt_modal_add_building" tabindex="-1" aria-hidden="true">
+    <!--begin::Modal dialog-->
+    <div class="modal-dialog mw-650px">
+        <!--begin::Modal content-->
+        <div class="modal-content">
+            <!--begin::Modal header-->
+            <div class="modal-header">
+                <!--begin::Modal title-->
+                <h2 class="fw-bolder">Add New Building</h2>
+                <!--end::Modal title-->
+                <!--begin::Close-->
+                <div id="kt_modal_add_building_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+                    <span class="svg-icon svg-icon-1">
+														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                             viewBox="0 0 24 24" fill="none">
+															<rect opacity="0.5" x="6" y="17.3137" width="16" height="2"
+                                                                  rx="1" transform="rotate(-45 6 17.3137)"
+                                                                  fill="currentColor"/>
+															<rect x="7.41422" y="6" width="16" height="2" rx="1"
+                                                                  transform="rotate(45 7.41422 6)" fill="currentColor"/>
+														</svg>
+													</span>
+                    <!--end::Svg Icon-->
+                </div>
+                <!--end::Close-->
+            </div>
+            <!--end::Modal header-->
+            <!--begin::Modal body-->
+            <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+                <!--begin::Form-->
+                <form id="kt_modal_add_building_form" class="form" action="#">
+                    <div class="fv-row mb-7">
+                        <!--begin::Label-->
+                        <label class="fs-6 fw-bold form-label mb-2">
+                            <span class="required">Building Name</span>
+                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip"
+                               title="Please enter building name i.e Visio Tower"></i>
+                        </label>
+                        <!--end::Label-->
+                        <!--begin::Input-->
+                        <input type="text" class="form-control form-control-solid" name="building_name"
+                               id="building_name" value="" required/>
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Input group-->
+
+                    <!--begin::Actions-->
+                    <div class="text-center">
+                        <button type="reset" id="kt_modal_add_building_cancel" class="btn btn-light me-3">
+                            Discard
+                        </button>
+                        <button type="submit" id="kt_modal_add_building_submit" class="btn btn-primary">
+                            <span class="indicator-label">Submit</span>
+                            <span class="indicator-progress">Please wait...
+															<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        </button>
+                    </div>
+                    <!--end::Actions-->
+                </form>
+                <!--end::Form-->
+            </div>
+            <!--end::Modal body-->
+        </div>
+        <!--end::Modal content-->
+    </div>
+    <!--end::Modal dialog-->
+</div>
