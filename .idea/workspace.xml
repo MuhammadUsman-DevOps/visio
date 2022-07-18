@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93ea1d7f-eb4c-40ad-9552-7ce4f65e4989" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Clients/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projects/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clients/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Visio/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Visio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Visio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Visio/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1655965694521</updated>
       <workItem from="1655965940338" duration="49766000" />
-      <workItem from="1658138417500" duration="4544000" />
+      <workItem from="1658138417500" duration="4849000" />
     </task>
     <servers />
   </component>

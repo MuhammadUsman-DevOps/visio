@@ -25,14 +25,6 @@ urlpatterns = [
     path('base', views.base),
     path('', views.dashboard, name="dashboard"),
     path('customers/', include("Clients.urls")),
-
-    path('projects/', views.all_projects, name="all_projects"),
-    path('project/details', views.project_details, name="project_details"),
-    path('project/sensors', views.installed_sensors, name="installed_sensors"),
-    path('project/alerts', views.project_alerts, name="project_alerts"),
-    path('project/settings', views.project_settings, name="project_settings"),
-    path('project/files', views.files, name="project_files"),
-    path('sensor/details', views.sensor_details, name="sensor_details"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
