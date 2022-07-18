@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.urls import path
+from django.urls import path, include
 
 from Visio import settings, views
 
@@ -24,9 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('base', views.base),
     path('', views.dashboard, name="dashboard"),
-    path('add-customer/', views.add_customer, name="add_customer"),
-    path('customer/details', views.customer_details, name="customer_details"),
-    path('customers/', views.customer_listing, name="customer_listing"),
+    path('customers/', include("Clients.urls")),
 
     path('projects/', views.all_projects, name="all_projects"),
     path('project/details', views.project_details, name="project_details"),

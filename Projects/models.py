@@ -3,6 +3,7 @@ import uuid
 from django.db import models
 
 from Clients.models import Clients
+from Visio.models import Sensor, Team
 
 
 class Project(models.Model):
@@ -43,7 +44,6 @@ class Floor(models.Model):
         verbose_name_plural = "Floors"
 
 
-
 class InstalledSensor(models.Model):
     id = models.UUIDField(default=uuid.uuid4, primary_key=True, editable=False)
     sensor_label = models.CharField(max_length=500)
@@ -54,5 +54,11 @@ class InstalledSensor(models.Model):
     floor = models.ForeignKey(Floor, on_delete=models.CASCADE)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE)
+    alert_team = models.ForeignKey(Team, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.sensor_label
 
+    class Meta:
+        verbose_name = "Installed Sensors"
+        verbose_name_plural = "Installed Sensor"
