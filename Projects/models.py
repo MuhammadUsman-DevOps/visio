@@ -1,0 +1,58 @@
+import uuid
+
+from django.db import models
+
+from Clients.models import Clients
+
+
+class Project(models.Model):
+    id = models.UUIDField(default=uuid.uuid4, primary_key=True, editable=False)
+    project_name = models.CharField(max_length=1000)
+    total_sensors = models.IntegerField(null=True, blank=True)
+    client = models.ForeignKey(Clients, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.project_name
+
+    class Meta:
+        verbose_name = "Projects"
+        verbose_name_plural = "Projects"
+
+
+class Building(models.Model):
+    building_name = models.CharField(max_length=2000)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.building_name
+
+    class Meta:
+        verbose_name = "Buildings"
+        verbose_name_plural = "Buildings"
+
+
+class Floor(models.Model):
+    floor_name = models.CharField(max_length=1500)
+    building = models.ForeignKey(Building, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.floor_name
+
+    class Meta:
+        verbose_name = "Floors"
+        verbose_name_plural = "Floors"
+
+
+
+class InstalledSensor(models.Model):
+    id = models.UUIDField(default=uuid.uuid4, primary_key=True, editable=False)
+    sensor_label = models.CharField(max_length=500)
+    min_range = models.IntegerField(null=True, blank=True)
+    max_range = models.IntegerField(null=True, blank=True)
+    location = models.CharField(max_length=1000)
+
+    floor = models.ForeignKey(Floor, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE)
+
+
