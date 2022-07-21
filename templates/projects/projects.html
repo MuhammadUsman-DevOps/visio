@@ -9,10 +9,11 @@
 
             <!--begin::Row-->
             <div class="row g-6 g-xl-9">
-                <!--begin::Col-->
+               {% for project in projects %}
+                     <!--begin::Col-->
                 <div class="col-md-6 col-xl-4">
                     <!--begin::Card-->
-                    <a href="{% url 'project_details' %}" class="card border-hover-primary">
+                    <a href="{% url 'project_details' project.id %}" class="card border-hover-primary">
                         <!--begin::Card header-->
                         <div class="card-header border-0 pt-9">
                             <!--begin::Card Title-->
@@ -26,7 +27,7 @@
                             <!--end::Car Title-->
                             <!--begin::Card toolbar-->
                             <div class="card-toolbar">
-                                <span class="badge badge-light-primary fw-bolder me-auto px-4 py-3">UAE Govt.</span>
+                                <span class="badge badge-light-primary fw-bolder me-auto px-4 py-3">{{ project.client.full_name }}</span>
                             </div>
                             <!--end::Card toolbar-->
                         </div>
@@ -34,22 +35,16 @@
                         <!--begin:: Card body-->
                         <div class="card-body p-9">
                             <!--begin::Name-->
-                            <div class="fs-3 fw-bolder text-dark">Burj Al Arab</div>
+                            <div class="fs-3 fw-bolder text-dark">{{ project.project_name }}</div>
                             <!--end::Name-->
                             <!--begin::Info-->
                             <div class="d-flex flex-wrap mb-5">
-                                <!--begin::Due-->
-                                <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-7 mb-3">
-                                    <div class="fs-6 text-gray-800 fw-bolder">1</div>
-                                    <div class="fw-bold text-gray-400">Buildings</div>
-                                </div>
-                                <!--end::Due-->
-                                <!--begin::Budget-->
+                                <!--begin::Sensors-->
                                 <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 mb-3">
-                                    <div class="fs-6 text-gray-800 fw-bolder">5000</div>
+                                    <div class="fs-6 text-gray-800 fw-bolder">{{ project.total_sensors }}</div>
                                     <div class="fw-bold text-gray-400">Sensors</div>
                                 </div>
-                                <!--end::Budget-->
+                                <!--end::Sensors-->
                             </div>
                             <!--end::Info-->
                         </div>
@@ -58,6 +53,8 @@
                     <!--end::Card-->
                 </div>
                 <!--end::Col-->
+               {% endfor %}
+
             </div>
             <!--end::Row-->
 {#            <!--begin::Pagination-->#}

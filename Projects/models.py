@@ -9,8 +9,11 @@ from Visio.models import Sensor, Team
 class Project(models.Model):
     id = models.UUIDField(default=uuid.uuid4, primary_key=True, editable=False)
     project_name = models.CharField(max_length=1000)
-    total_sensors = models.IntegerField(null=True, blank=True)
+    total_sensors = models.CharField(max_length=20, null=True, blank=True)
     client = models.ForeignKey(Clients, on_delete=models.CASCADE)
+
+    created = models.DateField(auto_now_add=True, null=True, blank=True)
+    updated = models.DateField(auto_now=True, null=True, blank=True)
 
     def __str__(self):
         return self.project_name
@@ -24,6 +27,9 @@ class Building(models.Model):
     building_name = models.CharField(max_length=2000)
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
 
+    created = models.DateField(auto_now_add=True, null=True, blank=True)
+    updated = models.DateField(auto_now=True, null=True, blank=True)
+
     def __str__(self):
         return self.building_name
 
@@ -35,6 +41,9 @@ class Building(models.Model):
 class Floor(models.Model):
     floor_name = models.CharField(max_length=1500)
     building = models.ForeignKey(Building, on_delete=models.CASCADE)
+
+    created = models.DateField(auto_now_add=True, null=True, blank=True)
+    updated = models.DateField(auto_now=True, null=True, blank=True)
 
     def __str__(self):
         return self.floor_name
@@ -55,6 +64,9 @@ class InstalledSensor(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     sensor = models.ForeignKey(Sensor, on_delete=models.CASCADE)
     alert_team = models.ForeignKey(Team, on_delete=models.CASCADE)
+
+    created = models.DateField(auto_now_add=True, null=True, blank=True)
+    updated = models.DateField(auto_now=True, null=True, blank=True)
 
     def __str__(self):
         return self.sensor_label

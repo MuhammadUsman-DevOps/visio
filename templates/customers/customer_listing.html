@@ -166,6 +166,7 @@
                         <!--end::Table head-->
                         <!--begin::Table body-->
                          <tbody class="fw-bold text-gray-600">
+                         {% for customer in customers %}
                         <tr>
                             <!--begin::Checkbox-->
                             <td>
@@ -176,28 +177,28 @@
                             <!--end::Checkbox-->
                             <!--begin::Name=-->
                             <td>
-                                <a href="{% url 'customer_details' %}"
-                                   class="text-gray-800 text-hover-primary mb-1">Emma Smith</a>
+                                <a href="{% url 'customer_details' customer.id %}"
+                                   class="text-gray-800 text-hover-primary mb-1">{{ customer.full_name }}</a>
                             </td>
                             <!--end::Name=-->
                             <!--begin::Email=-->
                             <td>
-                                <a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
+                                <a href="#" class="text-gray-600 text-hover-primary mb-1">{{ customer.email_address }}</a>
                             </td>
                             <!--end::Email=-->
                             <!--begin::Phone=-->
-                            <td>9746486264156</td>
+                            <td>{{ customer.phone_number }}</td>
                             <!--end::Phone=-->
                             <!--begin::Contact name=-->
                             <td data-filter="mastercard">
-                               John Doe
+                               {{ customer.contact_person_name }}
                             </td>
                             <!--end::Contact name=-->
                              <td>
-                                <a href="#" class="text-gray-600 text-hover-primary mb-1">smith@kpmg.com</a>
+                                <a href="#" class="text-gray-600 text-hover-primary mb-1">{{ customer.contact_person_email_address }}</a>
                             </td>
                             <!--begin::Date=-->
-                            <td>14 Dec 2020, 8:43 pm</td>
+                            <td>{{ customer.created }}</td>
                             <!--end::Date=-->
                             <!--begin::Action=-->
                             <td class="text-end">
@@ -217,7 +218,7 @@
                                      data-kt-menu="true">
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-3">
-                                        <a href="#"
+                                        <a href="{% url 'customer_details' customer.id %}"
                                            class="menu-link px-3">View</a>
                                     </div>
                                     <!--end::Menu item-->
@@ -231,6 +232,8 @@
                             </td>
                             <!--end::Action=-->
                         </tr>
+                         {% endfor %}
+
                          </tbody>
                         <!--end::Table body-->
                     </table>

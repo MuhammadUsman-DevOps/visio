@@ -32,15 +32,7 @@ var KTModalCustomersAdd = function () {
             })), t.addEventListener("click", (function (e) {
                 e.preventDefault(), n && n.validate().then((function (e) {
                     console.log("validated!"), "Valid" == e ? (t.setAttribute("data-kt-indicator", "on"), t.disabled = !0, setTimeout((function () {
-                        t.removeAttribute("data-kt-indicator"), Swal.fire({
-                            text: "Form has been successfully submitted!",
-                            icon: "success",
-                            buttonsStyling: !1,
-                            confirmButtonText: "Ok, got it!",
-                            customClass: {confirmButton: "btn btn-primary"}
-                        }).then((function (e) {
-                            e.isConfirmed && (i.hide(), t.disabled = !1, window.location = r.getAttribute("data-kt-redirect"))
-                        }))
+                        t.removeAttribute("data-kt-indicator"), $("#kt_modal_add_customer_form").submit()
                     }), 2e3)) : Swal.fire({
                         text: "Sorry, looks like there are some errors detected, please try again.",
                         icon: "error",

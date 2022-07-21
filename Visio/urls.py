@@ -23,6 +23,8 @@ from Visio import settings, views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('base', views.base),
+    path('accounts/login', views.auth_login, name="auth_login"),
+    path('accounts/logout', views.auth_logout, name="auth_logout"),
     path('', views.dashboard, name="dashboard"),
     path('customers/', include("Clients.urls")),
 ]

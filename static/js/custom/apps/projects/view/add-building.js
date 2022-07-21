@@ -20,15 +20,7 @@ var KTModalAddPayment = function () {
             })), e.addEventListener("click", (function (t) {
                 t.preventDefault(), i && i.validate().then((function (t) {
                     console.log("validated!"), "Valid" == t ? (e.setAttribute("data-kt-indicator", "on"), e.disabled = !0, setTimeout((function () {
-                        e.removeAttribute("data-kt-indicator"), Swal.fire({
-                            text: "Form has been successfully submitted!",
-                            icon: "success",
-                            buttonsStyling: !1,
-                            confirmButtonText: "Ok, got it!",
-                            customClass: {confirmButton: "btn btn-primary"}
-                        }).then((function (t) {
-                            t.isConfirmed && (r.hide(), e.disabled = !1, a.reset())
-                        }))
+                        e.removeAttribute("data-kt-indicator"), $("#kt_modal_add_building_form").submit()
                     }), 2e3)) : Swal.fire({
                         text: "Sorry, looks like there are some errors detected, please try again.",
                         icon: "error",

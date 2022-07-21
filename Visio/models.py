@@ -6,6 +6,9 @@ class Sensor(models.Model):
     sensor_type = models.CharField(max_length=100, null=True, blank=True)
     description = models.CharField(max_length=1000, null=True, blank=True)
 
+    created = models.DateField(auto_now_add=True, null=True, blank=True)
+    updated = models.DateField(auto_now=True, null=True, blank=True)
+
     def __str__(self):
         return self.sensor_name
 
@@ -18,6 +21,10 @@ class Team(models.Model):
     team_name = models.CharField(max_length=500)
     email_addresses = models.TextField()
     phone_numbers = models.TextField(null=True, blank=True)
+
+    created = models.DateField(auto_now_add=True, null=True, blank=True)
+    updated = models.DateField(auto_now=True, null=True, blank=True)
+
 
     def __str__(self):
         return self.team_name
