@@ -1,0 +1,171 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+{% block title %} Dashboard {% endblock title %}
+{% block main_content %}
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div id="kt_content_container" class="container-xxl">
+
+            <!--begin::Row-->
+            <div class="row g-6 g-xl-9">
+                <!--begin::Col-->
+                <div class="col-lg-6">
+                    <!--begin::Charts Widget 3-->
+                    <div class="card card-xl-stretch mb-xl-8">
+                        <!--begin::Header-->
+                        <div class="card-header border-0 pt-5">
+                            <h3 class="card-title align-items-start flex-column">
+                                <span class="card-label fw-bolder fs-3 mb-1">Temprature</span>
+                            </h3>
+                            <!--begin::Toolbar-->
+                            <div class="card-toolbar" data-kt-buttons="true">
+                                <a class="btn btn-sm btn-color-muted btn-active btn-active-primary active px-4 me-1"
+                                   id="kt_charts_widget_3_year_btn">Year</a>
+                                <a class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4 me-1"
+                                   id="kt_charts_widget_3_month_btn">Month</a>
+                                <a class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4"
+                                   id="kt_charts_widget_3_week_btn">Week</a>
+                            </div>
+                            <!--end::Toolbar-->
+                        </div>
+                        <!--end::Header-->
+                        <!--begin::Body-->
+                        <div class="card-body">
+                            <!--begin::Chart-->
+                            <div id="kt_charts_widget_3_chart" style="height: 350px"></div>
+                            <!--end::Chart-->
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end::Charts Widget 3-->
+                </div>
+                <!--end::Col-->
+
+                <div class="col-lg-6">
+                    <!--begin::Mixed Widget 17-->
+                    <div class="card card-xl-stretch mb-5 mb-xl-8">
+                        <!--begin::Body-->
+                        <div class="card-body pt-5">
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-stack">
+                                <!--begin::Title-->
+                                <h4 class="fw-bolder text-gray-800 m-0">Building Health Score</h4>
+                                <!--end::Title-->
+                                <!--begin::Menu-->
+                                <button type="button"
+                                        class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
+                                        data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                    <!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
+                                    <span class="svg-icon svg-icon-2">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24px"
+                                                                 height="24px" viewBox="0 0 24 24">
+																<g stroke="none" stroke-width="1" fill="none"
+                                                                   fill-rule="evenodd">
+																	<rect x="5" y="5" width="5" height="5" rx="1"
+                                                                          fill="currentColor"/>
+																	<rect x="14" y="5" width="5" height="5" rx="1"
+                                                                          fill="currentColor" opacity="0.3"/>
+																	<rect x="5" y="14" width="5" height="5" rx="1"
+                                                                          fill="currentColor" opacity="0.3"/>
+																	<rect x="14" y="14" width="5" height="5" rx="1"
+                                                                          fill="currentColor" opacity="0.3"/>
+																</g>
+															</svg>
+														</span>
+                                    <!--end::Svg Icon-->
+                                </button>
+                                <!--end::Menu-->
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Chart-->
+                            <div class="d-flex flex-center w-100">
+                                <div class="mixed-widget-17-chart" data-kt-chart-color="success"
+                                     style="height: 300px"></div>
+                            </div>
+                            <!--end::Chart-->
+                            <!--begin::Content-->
+                            <div class="text-center w-100 position-relative z-index-1" >
+                                <!--begin::Text-->
+                                <p class="fw-bold fs-4 text-gray-400 mb-6">Lorem Ipsum Dollar Summit</p>
+                                <!--end::Text-->
+
+                            </div>
+                            <!--end::Content-->
+                        </div>
+                        <!--end::Body-->
+                        <!--begin::Footer-->
+                    </div>
+                    <!--end::Mixed Widget 17-->
+                </div>
+                <div class="col-lg-6">
+                    <!--begin::Mixed Widget 17-->
+                    <div class="card card-xl-stretch mb-5 mb-xl-8">
+                        <!--begin::Body-->
+                        <div class="card-body pt-5">
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-stack">
+                                <!--begin::Title-->
+                                <h4 class="fw-bolder text-gray-800 m-0">ESG Score</h4>
+                                <!--end::Title-->
+                                <!--begin::Menu-->
+                                <button type="button"
+                                        class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
+                                        data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+                                    <!--begin::Svg Icon | path: icons/duotune/general/gen024.svg-->
+                                    <span class="svg-icon svg-icon-2">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24px"
+                                                                 height="24px" viewBox="0 0 24 24">
+																<g stroke="none" stroke-width="1" fill="none"
+                                                                   fill-rule="evenodd">
+																	<rect x="5" y="5" width="5" height="5" rx="1"
+                                                                          fill="currentColor"/>
+																	<rect x="14" y="5" width="5" height="5" rx="1"
+                                                                          fill="currentColor" opacity="0.3"/>
+																	<rect x="5" y="14" width="5" height="5" rx="1"
+                                                                          fill="currentColor" opacity="0.3"/>
+																	<rect x="14" y="14" width="5" height="5" rx="1"
+                                                                          fill="currentColor" opacity="0.3"/>
+																</g>
+															</svg>
+														</span>
+                                    <!--end::Svg Icon-->
+                                </button>
+                                <!--end::Menu-->
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Chart-->
+                            <div class="d-flex flex-center w-100">
+                                <div class="mixed-widget-17-chart" data-kt-chart-color="success"
+                                     style="height: 300px"></div>
+                            </div>
+                            <!--end::Chart-->
+                            <!--begin::Content-->
+                            <div class="text-center w-100 position-relative z-index-1" >
+                                <!--begin::Text-->
+                                <p class="fw-bold fs-4 text-gray-400 mb-6">Lorem Ipsum Dollar Summit</p>
+                                <!--end::Text-->
+
+                            </div>
+                            <!--end::Content-->
+                        </div>
+                        <!--end::Body-->
+                        <!--begin::Footer-->
+                    </div>
+                    <!--end::Mixed Widget 17-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Row-->
+
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+
+
+{% endblock main_content %}
+{% block extra_js %}
+    <script src="{% static 'js/custom/apps/ecommerce/catalog/categories.js' %}"></script>
+
+{% endblock extra_js %}

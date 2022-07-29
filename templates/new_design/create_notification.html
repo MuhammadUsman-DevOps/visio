@@ -1,0 +1,489 @@
+{% extends 'bases/base.html' %}
+{% load static %}
+{% block title %} Create Notification {% endblock title %}
+{% block main_content %}
+    <!--begin::Post-->
+    <div class="post d-flex flex-column-fluid" id="kt_post">
+        <!--begin::Container-->
+        <div id="kt_content_container" class="container-xxl">
+            <form id="kt_ecommerce_add_category_form" class="form d-flex flex-column flex-lg-row"
+                  data-kt-redirect="../../demo1/dist/apps/ecommerce/catalog/categories.html">
+                <!--begin::Aside column-->
+                <div class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px mb-7 me-lg-10">
+                    <!--begin::Sticky aside-->
+                    <div class="card card-flush mb-0">
+                        <!--begin::Aside content-->
+                        <div class="card-body">
+                            <!--begin::Button-->
+                            <a href="#"
+                               class="btn btn-primary text-uppercase w-100 mb-10"><i
+                                    class="fa fa-plus-circle fs-2x"></i> New Notification</a>
+                            <!--end::Button-->
+                            <!--begin::Menu-->
+                            <div class="menu menu-column menu-rounded menu-state-bg menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary mb-10">
+                                <!--begin::Menu item-->
+                                <a href="#" class="menu-item mb-3">
+                                    <span class="menu-link">
+										<span class="menu-title fs-3">Humidity</span>
+                                    </span>
+                                </a>
+                                <!--end::Menu item-->
+                                <span class="separator"></span>
+
+                            </div>
+                            <!--end::Menu-->
+                        </div>
+                        <!--end::Aside content-->
+                    </div>
+                    <!--end::Sticky aside-->
+
+                </div>
+                <!--end::Aside column-->
+                <!--begin::Main column-->
+                <div class="d-flex flex-column flex-row-fluid gap-7 gap-lg-10">
+                    <!--begin::General options-->
+                    <div class="card card-flush py-4">
+                        <!--begin::Card body-->
+                        <div class="card-body pt-0">
+                            <!--begin::Input group-->
+                            <div class="mb-10 fv-row">
+                                <!--begin::Label-->
+                                <label class="required form-label">Notification Name</label>
+                                <!--end::Label-->
+                                <!--begin::Input-->
+                                <input type="text" name="notification_name" class="form-control mb-2"
+                                       placeholder="Notification Name" value=""/>
+                                <!--end::Input-->
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div class="fv-row mb-10">
+                                <!--begin::Wrapper-->
+                                <div class="d-flex flex-stack">
+                                    <!--begin::Label-->
+                                    <div class="me-5">
+                                        <!--begin::Label-->
+                                        <label class="fs-6 fw-bold">Notification Enabled?</label>
+                                        <!--end::Label-->
+
+                                    </div>
+                                    <!--end::Label-->
+                                    <!--begin::Switch-->
+                                    <label class="form-check form-switch form-check-custom form-check-solid">
+                                        <!--begin::Input-->
+                                        <input class="form-check-input" name="notification_enabled" type="checkbox"
+                                               value="1" id="notification_enabled"
+                                               checked="checked"/>
+                                        <!--end::Input-->
+                                        <!--begin::Label-->
+                                        <span class="form-check-label fw-bold text-muted"
+                                              for="notification_enabled">Yes</span>
+                                        <!--end::Label-->
+                                    </label>
+                                    <!--end::Switch-->
+                                </div>
+                                <!--begin::Wrapper-->
+                            </div>
+                            <!--end::Input group-->
+
+                        </div>
+                        <!--end::Card header-->
+                    </div>
+                    <!--end::General options-->
+                    <!--begin::Emulator-->
+                    <div class="card card-flush py-4">
+                        <!--begin::Card header-->
+                        <div class="card-header">
+                            <div class="card-title">
+                                <h2>Trigger</h2>
+                            </div>
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body pt-0">
+                            <!--begin::Input group-->
+                            <div class="mt-5">
+                                <!--begin::Trigger-->
+                                <div id="">
+                                    <!--begin::Form group-->
+                                    <div class="form-group">
+                                        <div
+                                             class="d-flex flex-column gap-3">
+                                            <div  class="form-group d-flex flex-wrap gap-5">
+                                                <!--begin::Select2-->
+
+                                                <div class="w-100 w-md-200px">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label text-muted"
+                                                           for="condition_type">When</label>
+                                                    <!--end::Label-->
+                                                    <select class="form-select" name="condition_type"
+                                                            id="condition_type"
+                                                            data-placeholder="Select an option"
+                                                            data-kt-ecommerce-catalog-add-category="condition_type">
+                                                        <option></option>
+                                                        <option value="Temperature">Temperature</option>
+                                                        <option value="Proximity Status">Proximity Status</option>
+                                                        <option value="Touched">Touched</option>
+                                                        <option value="Humidity">Humidity</option>
+                                                        <option value="Water Detected">Water Detected</option>
+                                                        <option value="CO2">CO2</option>
+                                                        <option value="Desk Occupancy">Desk Occupancy</option>
+                                                    </select>
+                                                </div>
+                                                <!--end::Select2-->
+                                                <!--begin:: Extra Options -->
+
+                                                <!--begin::Select2-->
+                                                <div class="w-100 w-md-500px d-none" id="has_state_div_proximity">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label text-muted" for="has_state">has
+                                                        state</label>
+                                                    <!--end::Label-->
+                                                    <select class="form-select" name="has_state" id="has_state"
+                                                            data-placeholder="Select an option"
+                                                            data-kt-ecommerce-catalog-add-category="condition_equals">
+                                                        <option value="Closed">Closed (no object present)</option>
+                                                        <option value="Open">Open (object present)</option>
+                                                    </select>
+                                                </div>
+                                                <!--end::Select2-->
+
+                                                <!--begin::Select2-->
+                                                <div class="w-100 w-md-500px d-none" id="has_state_div_water">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label text-muted" for="has_state">has
+                                                        state</label>
+                                                    <!--end::Label-->
+                                                    <select class="form-select" name="has_state" id="has_state"
+                                                            data-placeholder="Select an option"
+                                                            data-kt-ecommerce-catalog-add-category="has_state">
+
+                                                        <option value="Closed">Water present</option>
+                                                        <option value="Open">No water present</option>
+                                                    </select>
+                                                </div>
+                                                <!--end::Select2-->
+
+                                                <!--begin::Select2-->
+                                                <div class="w-100 w-md-500px d-none" id="has_state_div_desk">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label text-muted" for="has_state">has
+                                                        state</label>
+                                                    <!--end::Label-->
+                                                    <select class="form-select" name="has_state" id="has_state"
+                                                            data-placeholder="Select an option"
+                                                            data-kt-ecommerce-catalog-add-category="condition_equals">
+                                                        <option></option>
+                                                        <option value="Occupied">Occupied</option>
+                                                        <option value="Not Occupied">Not Occupied</option>
+                                                    </select>
+                                                </div>
+                                                <!--end::Select2-->
+
+                                                <!--end:: Extra Options -->
+
+                                                <!--begin::Select2-->
+                                                <div class="w-100 w-md-200px" id="condition_div">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label text-muted" for="condition">is</label>
+                                                    <!--end::Label-->
+                                                    <select class="form-select" name="condition" id="condition"
+                                                            data-placeholder="Select an option"
+                                                            data-kt-ecommerce-catalog-add-category="condition_equals">
+                                                        <option></option>
+                                                        <option value="Above">Above</option>
+                                                        <option value="Below">Below</option>
+                                                        <option value="Outside Range">Outside Range</option>
+                                                        <option value="Within Range">Within Range</option>
+                                                    </select>
+                                                </div>
+                                                <!--end::Select2-->
+
+                                                <div class="w-100 w-md-100px d-none" id="upper">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label text-muted"
+                                                           for="condition_label">Upper</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control mw-100 w-100px"
+                                                           id="condition_label"
+                                                           name="condition_label" placeholder="Upper"/>
+                                                    <!--end::Input-->
+                                                </div>
+
+                                                <div class="w-100 w-md-100px d-none" id="lower">
+                                                    <!--begin::Label-->
+                                                    <label class="form-label text-muted"
+                                                           for="condition_label">Lower</label>
+                                                    <!--end::Label-->
+                                                    <!--begin::Input-->
+                                                    <input type="text" class="form-control mw-100 w-100px"
+                                                           id="condition_label"
+                                                           name="condition_label" placeholder="Lower"/>
+                                                    <!--end::Input-->
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end::Form group-->
+                                </div>
+                                <!--end::Trigger-->
+                            </div>
+                            <!--end::Input group-->
+                        </div>
+                        <!--end::Card header-->
+                    </div>
+                    <!--end::Emulator-->
+
+                     <!--begin::Add Device-->
+                    <div class="card card-flush py-4">
+                        <!--begin::Card header-->
+                        <div class="card-header">
+                            <div class="card-title">
+                                <h2>Select Device</h2>
+                            </div>
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body pt-0">
+                            <!--begin::Input group-->
+                            <div class="mt-5" data-kt-ecommerce-catalog-add-category="auto-options">
+                                <!--begin::Repeater-->
+                                <div id="kt_ecommerce_add_category_conditions">
+                                    <!--begin::Form group-->
+                                    <div class="form-group">
+                                        <div data-repeater-list="kt_ecommerce_add_category_conditions"
+                                             class="d-flex flex-column gap-3">
+                                            <div data-repeater-item="" class="form-group d-flex flex-wrap gap-5">
+                                                <!--begin::Select2-->
+                                                <div class="w-100 w-md-600px">
+                                                    <select class="form-select" name="sensor" id="sensor"
+                                                            data-placeholder="Select an option"
+                                                            data-kt-ecommerce-catalog-add-category="sensor">
+
+                                                        <option value="Temperature Sensor">Temperature Sensor</option>
+                                                        <option value="Proximity Sensor">Proximity Sensor</option>
+                                                    </select>
+                                                </div>
+                                                <!--end::Select2-->
+                                                <!--begin::Button-->
+                                                <button type="button" data-repeater-delete=""
+                                                        class="btn btn-sm btn-icon btn-light-danger">
+                                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr088.svg-->
+                                                    <span class="svg-icon svg-icon-2">
+																			<svg xmlns="http://www.w3.org/2000/svg"
+                                                                                 width="24" height="24"
+                                                                                 viewBox="0 0 24 24" fill="none">
+																				<rect opacity="0.5" x="7.05025"
+                                                                                      y="15.5356" width="12" height="2"
+                                                                                      rx="1"
+                                                                                      transform="rotate(-45 7.05025 15.5356)"
+                                                                                      fill="currentColor"/>
+																				<rect x="8.46447" y="7.05029" width="12"
+                                                                                      height="2" rx="1"
+                                                                                      transform="rotate(45 8.46447 7.05029)"
+                                                                                      fill="currentColor"/>
+																			</svg>
+																		</span>
+                                                    <!--end::Svg Icon-->
+                                                </button>
+                                                <!--end::Button-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end::Form group-->
+                                    <!--begin::Form group-->
+                                    <div class="form-group mt-5">
+                                        <!--begin::Button-->
+                                        <button type="button" data-repeater-create=""
+                                                class="btn btn-sm btn-light-primary">
+                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr087.svg-->
+                                            <span class="svg-icon svg-icon-2">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                     height="24" viewBox="0 0 24 24" fill="none">
+																	<rect opacity="0.5" x="11" y="18" width="12"
+                                                                          height="2" rx="1"
+                                                                          transform="rotate(-90 11 18)"
+                                                                          fill="currentColor"/>
+																	<rect x="6" y="11" width="12" height="2" rx="1"
+                                                                          fill="currentColor"/>
+																</svg>
+															</span>
+                                            <!--end::Svg Icon-->Add another condition
+                                        </button>
+                                        <!--end::Button-->
+                                    </div>
+                                    <!--end::Form group-->
+                                </div>
+                                <!--end::Repeater-->
+                            </div>
+                            <!--end::Input group-->
+                        </div>
+                        <!--end::Card header-->
+                    </div>
+                    <!--end::Add Device-->
+
+                    <!--begin::Email Settings-->
+                    <div class="card card-flush py-4">
+                        <!--begin::Card header-->
+                        <div class="card-header">
+                            <div class="card-title">
+                                <h2>Send Email</h2>
+                            </div>
+                        </div>
+                        <!--end::Card header-->
+                        <!--begin::Card body-->
+                        <div class="card-body pt-0">
+                            <!--begin::Input group-->
+                            <div class="mb-10">
+                                <!--begin::Label-->
+                                <label class="form-label required">Recipients</label>
+                                <!--end::Label-->
+                                <!--begin::Editor-->
+                                <input id="kt_ecommerce_add_category_meta_keywords"
+                                       name="kt_ecommerce_add_category_meta_keywords" class="form-control mb-2"/>
+                                <!--end::Editor-->
+                                <!--begin::Description-->
+                                <div class="text-muted fs-7">Enter email address and press enter or add
+                                    <code>,</code>between each email address.
+                                </div>
+                                <!--end::Description-->
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div class="mb-10">
+                                <!--begin::Label-->
+                                <label class="form-label required">Email Subject</label>
+                                <!--end::Label-->
+                                <!--begin::Input-->
+                                <input type="text" class="form-control mb-2" name="meta_title"
+                                       placeholder="Email Subject"/>
+                                <!--end::Input-->
+                            </div>
+                            <!--end::Input group-->
+                            <!--begin::Input group-->
+                            <div class="mb-10">
+                                <!--begin::Label-->
+                                <label class="form-label">Email Body</label>
+                                <!--end::Label-->
+                                <!--begin::Editor-->
+                                <div id="kt_ecommerce_add_category_meta_description"
+                                     name="kt_ecommerce_add_category_meta_description" class="min-h-100px mb-2"></div>
+                                <!--end::Editor-->
+                            </div>
+                            <!--end::Input group-->
+
+                        </div>
+                        <!--end::Card header-->
+                    </div>
+                    <!--end::Email Settings-->
+
+                    <div class="d-flex justify-content-end">
+
+                        <!--begin::Button-->
+                        <button type="submit" id="kt_ecommerce_add_category_submit" class="btn btn-primary">
+                            <span class="indicator-label">Save Notification</span>
+                            <span class="indicator-progress">Please wait...
+												<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        </button>
+                        <!--end::Button-->
+                    </div>
+
+
+                </div>
+                <!--end::Main column-->
+            </form>
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Post-->
+
+{% endblock main_content %}
+{% block extra_js %}
+    <script src="{% static 'plugins/custom/formrepeater/formrepeater.bundle.js' %}"></script>
+    <script src="{% static 'js/custom/apps/ecommerce/catalog/save-category.js' %}"></script>
+    <script>
+        $("#condition_type").change(function () {
+            var selected_type = $("#condition_type option:selected").val();
+            if (selected_type === "Temperature") {
+                $("#condition_div").removeClass("d-none");
+                $("#has_state_div_proximity").addClass("d-none");
+                $("#has_state_div_water").addClass("d-none");
+                $("#has_state_div_desk").addClass("d-none");
+
+                $("#upper").removeClass("d-none");
+                $("#lower").removeClass("d-none");
+
+            } else if (selected_type === "Proximity Status") {
+                $("#condition_div").addClass("d-none");
+                $("#has_state_div_proximity").removeClass("d-none");
+                $("#has_state_div_water").addClass("d-none");
+                $("#has_state_div_desk").addClass("d-none");
+
+                $("#upper").addClass("d-none");
+                $("#lower").addClass("d-none");
+
+            } else if (selected_type === "Touched") {
+                $("#condition_div").addClass("d-none");
+                $("#has_state_div_proximity").addClass("d-none");
+                $("#has_state_div_water").addClass("d-none");
+                $("#has_state_div_desk").addClass("d-none");
+
+                $("#upper").addClass("d-none");
+                $("#lower").addClass("d-none");
+
+            } else if (selected_type === "Humidity") {
+                $("#condition_div").removeClass("d-none");
+                $("#has_state_div_proximity").addClass("d-none");
+                $("#has_state_div_water").addClass("d-none");
+                $("#has_state_div_desk").addClass("d-none");
+
+                $("#upper").removeClass("d-none");
+                $("#lower").removeClass("d-none");
+
+            } else if (selected_type === "Water Detected") {
+                $("#condition_div").addClass("d-none");
+                $("#has_state_div_proximity").addClass("d-none");
+                $("#has_state_div_water").removeClass("d-none");
+                $("#has_state_div_desk").addClass("d-none");
+
+                $("#upper").addClass("d-none");
+                $("#lower").addClass("d-none");
+
+            } else if (selected_type === "CO2") {
+                $("#condition_div").removeClass("d-none");
+                $("#has_state_div_proximity").addClass("d-none");
+                $("#has_state_div_water").addClass("d-none");
+                $("#has_state_div_desk").addClass("d-none");
+
+                $("#upper").removeClass("d-none");
+                $("#lower").removeClass("d-none");
+
+            } else if (selected_type === "Desk Occupancy") {
+                $("#condition_div").addClass("d-none");
+                $("#has_state_div_proximity").addClass("d-none");
+                $("#has_state_div_water").addClass("d-none");
+                $("#has_state_div_desk").removeClass("d-none");
+
+                $("#upper").addClass("d-none");
+                $("#lower").addClass("d-none");
+
+            }
+
+        });
+        $("#condition").change(function () {
+            if ($("#condition option:selected").val() === "Above") {
+                $("#upper").removeClass("d-none");
+                $("#lower").addClass("d-none");
+            } else if ($("#condition option:selected").val() === "Below") {
+                $("#upper").addClass("d-none");
+                $("#lower").removeClass("d-none");
+            } else {
+                $("#upper").removeClass("d-none");
+                $("#lower").removeClass("d-none");
+            }
+        })
+    </script>
+{% endblock extra_js %}

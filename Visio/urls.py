@@ -27,6 +27,12 @@ urlpatterns = [
     path('accounts/logout', views.auth_logout, name="auth_logout"),
     path('', views.dashboard, name="dashboard"),
     path('customers/', include("Clients.urls")),
+
+        # """New Design | DT Style URLs"""
+    path('sensors/', views.new_sensors_view, name="new_sensors_view"),
+    path('sensor-details/', views.sensor_details, name="sensor_details"),
+    path('rules/new/', views.create_notification, name="create_notification"),
+    path('dashboard/new/', views.new_dashboard, name="new_dashboard"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

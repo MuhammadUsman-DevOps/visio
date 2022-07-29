@@ -2,38 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93ea1d7f-eb4c-40ad-9552-7ce4f65e4989" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Visio/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/media/visio_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/media/visio_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/authentication/signin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/projects/add_project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Visio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Visio.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/new_design/create_notification.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/new_design/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/new_design/sensor_details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/new_design/sensors.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clients/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clients/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clients/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clients/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projects/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projects/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Visio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Visio/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Visio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Visio/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Visio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Visio/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/custom/apps/customers/add.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/custom/apps/customers/add.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/custom/apps/customers/view/add-project.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/custom/apps/customers/view/add-project.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/custom/apps/projects/view/add-building.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/custom/apps/projects/view/add-building.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/custom/authentication/sign-in/general.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/custom/authentication/sign-in/general.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/custom/widgets.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/custom/widgets.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/bases/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bases/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customers/customer_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/customer_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customers/customer_listing.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/customer_listing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/customers/getting_started.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/getting_started.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/project_banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/project_banner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projects/installed_sensors.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projects/installed_sensors.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projects/project_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projects/project_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projects/projects.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projects/projects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projects/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projects/settings.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +48,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\muham\PycharmProjects\Visio\templates\new_design" />
       <recent name="C:\Users\muham\PycharmProjects\Visio\static\media" />
       <recent name="C:\Users\muham\PycharmProjects\Visio\templates\authentication" />
       <recent name="C:\Users\muham\PycharmProjects\Visio\templates\projects" />
       <recent name="C:\Users\muham\PycharmProjects\Visio\templates\includes" />
-      <recent name="C:\Users\muham\PycharmProjects\Visio\static\js\custom\apps\sensor" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.Nitro">
@@ -145,7 +123,11 @@
       <workItem from="1658246943101" duration="4185000" />
       <workItem from="1658339770316" duration="7101000" />
       <workItem from="1658383825704" duration="51000" />
-      <workItem from="1658396860456" duration="9116000" />
+      <workItem from="1658396860456" duration="9712000" />
+      <workItem from="1658483143520" duration="122000" />
+      <workItem from="1658905794341" duration="21815000" />
+      <workItem from="1659036268780" duration="78000" />
+      <workItem from="1659099458844" duration="834000" />
     </task>
     <servers />
   </component>
@@ -170,22 +152,24 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1658231728862" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1658383881624">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="2606" y="234" key="FileChooserDialogImpl" timestamp="1658483265959">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2606" y="234" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1658483265959" />
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1658383881624" />
     <state x="277" y="75" key="SettingsEditor" timestamp="1658231171426">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="75" key="SettingsEditor/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1658231171426" />
-    <state x="541" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1658383835866">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="2596" y="383" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1658339793463" />
-    <state x="541" y="306" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1658383835866" />
-    <state x="2543" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1658409161846">
+    <state x="2596" y="383" key="com.intellij.ide.util.TipDialog" timestamp="1659036314242">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2543" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1658409161846" />
+    <state x="541" y="306" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.0.1920.1080@0.0.1536.864" timestamp="1658905836832" />
+    <state x="2596" y="383" key="com.intellij.ide.util.TipDialog/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1659036314242" />
+    <state x="541" y="306" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1658383835866" />
+    <state x="2543" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1658917355326">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2543" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1536.864/1920.0.1920.1080@1920.0.1920.1080" timestamp="1658917355326" />
   </component>
 </project>

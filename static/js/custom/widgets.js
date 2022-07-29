@@ -209,7 +209,7 @@ var KTWidgets = {
                 fill: {type: "solid", opacity: 1},
                 stroke: {curve: "smooth", show: !0, width: 3, colors: [o]},
                 xaxis: {
-                    categories: ["Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
+                    categories: ["Jul 24 9:00", "Jul 24 10:00", "Jul 24 11:00", "Jul 24 12:00", "Jul 24 13:00", "Jul 24 10:00", "Jul 24 14:00"],
                     axisBorder: {show: !1},
                     axisTicks: {show: !1},
                     labels: {style: {colors: t, fontSize: "12px"}},

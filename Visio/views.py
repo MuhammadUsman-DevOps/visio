@@ -45,3 +45,20 @@ def auth_login(request):
 def auth_logout(request):
     logout(request)
     return redirect("auth_login")
+
+
+"""******************************** New Design | DT Style ********************************"""
+
+def new_sensors_view(request):
+    return render(request, template_name="new_design/sensors.html")
+
+
+def sensor_details(request):
+    return render(request, template_name="new_design/sensor_details.html")
+
+def create_notification(request):
+    return render(request, template_name="new_design/create_notification.html")
+
+
+def new_dashboard(request):
+    return render(request, template_name="new_design/dashboard.html")
